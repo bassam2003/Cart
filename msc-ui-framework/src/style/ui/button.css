@@ -1,0 +1,116 @@
+.btn {
+  @apply inline-block tracking-wider font-bold;
+  &-primary {
+    @apply bg-gradient-to-r from-primary-accent-1 to-primary text-white;
+  }
+
+  &-success {
+    @apply bg-gradient-to-r from-success-accent-1 to-success text-white;
+  }
+
+  &-error {
+    @apply bg-gradient-to-r from-error-accent-1 to-error text-white;
+  }
+
+  &-warning {
+    @apply bg-gradient-to-r from-warning-accent-1 to-warning text-white;
+  }
+
+  &-disabled {
+    @apply bg-monochromes opacity-25 text-white cursor-not-allowed;
+  }
+}
+
+@variants focus {
+  .btn {
+    @apply focus:outline-none focus:ring-2 focus:ring-gray-800;
+    &-primary {
+      @apply focus:from-primary-variant-2 focus:to-red-500;
+      &-outlined {
+        @apply focus:bg-primary-variant-4;
+      }
+    }
+
+    &-success {
+      @apply focus:from-success-variant-2 focus:to-red-500;
+      &-outlined {
+        @apply focus:bg-success-variant-4;
+      }
+    }
+
+    &-error {
+      @apply focus:from-error-variant-2 focus:to-red-500;
+      &-outlined {
+        @apply focus:bg-error-variant-4;
+      }
+    }
+
+    &-warning {
+      @apply focus:from-warning-variant-2 focus:to-red-500;
+      &-outlined {
+        @apply focus:bg-warning-variant-4;
+      }
+    }
+  }
+}
+
+@variants hover {
+  .btn-primary {
+    @apply hover:from-primary-variant-2 hover:to-primary;
+    &-outlined {
+      @apply hover:bg-primary-variant-4;
+    }
+  }
+  .btn-success {
+    @apply hover:from-success-variant-2 hover:to-success;
+    &-outlined {
+      @apply hover:bg-success-variant-4;
+    }
+  }
+
+  .btn-error {
+    @apply hover:from-error-variant-2 hover:to-error;
+    &-outlined {
+      @apply hover:bg-error-variant-4;
+    }
+  }
+
+  .btn-warning {
+    @apply hover:from-warning-variant-2 hover:to-warning;
+    &-outlined {
+      @apply hover:bg-warning-variant-4;
+    }
+  }
+}
+
+@variants active {
+  .btn {
+    &-primary {
+      @apply active:from-primary active:to-red-500;
+      &-outlined {
+        @apply active:bg-primary-variant-4;
+      }
+    }
+
+    &-success {
+      @apply active:from-success active:to-red-500;
+      &-outlined {
+        @apply active:bg-success-variant-4;
+      }
+    }
+
+    &-error {
+      @apply active:from-error active:to-red-500;
+      &-outlined {
+        @apply active:bg-error-variant-4;
+      }
+    }
+
+    &-warning {
+      @apply active:from-warning active:to-red-500;
+      &-outlined {
+        @apply active:bg-warning-variant-4;
+      }
+    }
+  }
+}
